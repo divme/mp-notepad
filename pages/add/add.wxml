@@ -1,0 +1,10 @@
+<view class="page">
+  <view class='input-box'>
+       <textarea auto-height='true' maxlength='-1'  placeholder='请输入内容' placeholder-style="font-size:15px" bindinput='edit' class="input" value='{{content}}' />
+  </view>
+  <!-- <view class='content'>{{content}}</view> -->
+  <view class="btns">
+     <view class="btn cancle" bindtap='cancle'>取消</view>
+     <view class="btn save" bindtap='save'>保存</view>
+  </view>
+</view> 

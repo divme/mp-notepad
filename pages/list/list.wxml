@@ -1,0 +1,32 @@
+<view class="page" wx:if="{{showAll}}">
+   <scroll-view scroll-y="true" class="list">
+       <view wx:if="{{list.length == 0}}" class="nothing">点击下方按钮，添加新备忘录</view>
+       <block wx:for="{{list}}">
+          <view class="card">
+              <view class="main" bindtap="toggle" data-id="{{item.id}}">
+                  <view class="content">{{item.content}}</view>
+                  <view class="time">{{item.time}}</view>
+              </view>  
+              <view class="options" wx:if="{{item.isShow}}">
+                  <view class="option edit" bindtap='edit' data-id="{{item.id}}">编辑</view> 
+                  <view class="option delete" bindtap='delete' data-id="{{item.id}}">删除</view>    
+              </view>
+          </view> 
+       </block>
+   </scroll-view>
+
+   <movable-area class='move-area'>
+        <movable-view class="move" direction="all" bindtap='add'>+</movable-view>
+   </movable-area>
+</view>
+
+<view class='shade' wx:if="{{!showAll}}">
+   <view class='check-box'>
+      <input type='text' password='true' bindinput='cinput' placeholder='请输入密码' />
+      <view class='err' wx:if="{{hasErr}}">{{errMsg}}</view>
+      <button class='sure'  bindtap='cpassword'>确定</button>
+   </view>
+</view>
+
+ <navigator class="mine" url='../mine/mine'>我的</navigator> 
+

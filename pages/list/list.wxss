@@ -1,0 +1,135 @@
+page, .page{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card{
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 0;
+  background: #f4f4f4;
+  box-sizing: border-box;
+}
+.content{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 15px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+.time{
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 15px;
+  color: #f03838;
+  font-weight: bold;
+  text-align: right;
+}
+
+.options{
+  position: relative;
+  bottom: -10px;
+  /* width: 360rpx; */
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+   margin-top: 8px; 
+}
+.option{
+  float: left;
+  width: 50%;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+.edit{
+  background: green;
+  color: #fff;
+}
+.delete{
+  background: #f03838;
+  color: #ffffff;
+}
+
+
+.move-area{
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.move{
+  position:absolute;
+  left: 60%;
+  top: 66px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 36px;
+  border-radius: 50%;
+  background: #f03838;
+  color: #ffffff;
+  text-align: center;
+  z-index: 10;
+}
+.nothing{
+  height: 60px;
+  line-height: 60px;
+  font-size: 15px;
+  color: #f03838;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mine{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  text-align: center;
+  background: #f03838;
+  color: #fff;
+}
+
+.shade{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 99;
+}
+.check-box{
+  position: absolute;
+  width: 80%;
+  min-height: 200rpx;
+  padding:20px;
+  top: 20%;
+  left: 10%;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.check-box input{
+  height: 80rpx;
+  padding: 0 10px;
+  font-size: 15px;
+  border: 1px solid #f4f4f4;
+}
+.check-box button{
+  margin-top: 20px;
+  font-size: 15px;
+}
+.err{
+  height: 66rpx;
+  line-height: 66rpx;
+  padding: 0 10px;
+  font-size: 12px;
+}

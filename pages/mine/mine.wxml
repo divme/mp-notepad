@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo}}" class="getInfo" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+</view>
+
+<view class="setlist">
+    <view class="list" bindtap="isok">设置密码</view>
+    <view class="change" wx:if="{{isSet}}">
+        <view class="group">
+            <label>设置密码：</label>
+            <input type="text" password='true' placeholder='请输入密码' bindinput='input' />
+        </view>
+        <view class="group">
+            <label>确认密码：</label>
+            <input type="text" password='true' placeholder='请确认密码' bindinput='makesure' />
+        </view>
+        <view class='err' wx:if="{{isErr}}">{{errMsg}}</view>
+        <button class='submit' bindtap='submit'>确定</button>
+    </view>
+    <view class='list cancle' bindtap='cancle'>{{content}}</view>
+</view>

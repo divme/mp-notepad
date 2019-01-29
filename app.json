@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/list/list",
+    "pages/add/add",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"weight",
+    "navigationBarBackgroundColor": "#f03838",
+    "navigationBarTitleText": "备忘录",
+    "navigationBarTextStyle":"#fff"
+  }
+}
